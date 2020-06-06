@@ -21,7 +21,7 @@ bool isSub(string& name)
 
 bool isVirtual(string &name)
 {
-    if (name[0] == '_')
+    if (name[0] == name[1] == '_' )
     {
         virtualFunctionCount++;
         return true;
