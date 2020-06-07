@@ -58,7 +58,7 @@ void onFirstLine(vector<string>&vec, ifstream &source, string &line)
             }
         }
     }
-    vec.push_back("\tDWORD *" + line + ";");
+    vec.push_back("\t_DWORD *" + line + ";");
 }
 
 vector<string> processInput(vector<string>&vec, ifstream &source)
@@ -77,7 +77,7 @@ vector<string> processInput(vector<string>&vec, ifstream &source)
                 buffer = "p" + buffer + to_string(virtualFunctionCount);
             else if (!isSub(buffer))   //erase leftovers if named  
                 buffer = extractName(buffer);
-            vec.push_back("\tDWORD *" + buffer + ";");
+            vec.push_back("\t_DWORD *" + buffer + ";");
         }
     }
     return vec;
